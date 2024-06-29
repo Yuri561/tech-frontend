@@ -1,0 +1,66 @@
+/* styles/Header.css */
+.navbar {
+  background-color: #283048 !important; /* Dark background color */
+  color: white !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 0.75rem 1rem; /* Adjust padding for a more compact header */
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .navbar-toggler-icon {
+  color: white !important;
+  transition: color 0.3s ease; /* Smooth transition for color changes */
+}
+
+.navbar .navbar-brand:hover,
+.navbar .nav-link:hover,
+.navbar .navbar-brand:focus,
+.navbar .nav-link:focus {
+  color: #e2e2e2 !important; /* Lighter color on hover/focus */
+}
+
+.navbar .nav-item .dropdown-menu .dropdown-item {
+  color: #000 !important; /* Black text in dropdown by default */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.navbar .nav-item .dropdown-menu .dropdown-item:hover,
+.navbar .nav-item .dropdown-menu .dropdown-item:focus {
+  background-color: #f8f9fa !important; /* Light background on hover/focus */
+  color: #000 !important; /* Black text on hover/focus */
+}
+
+.navbar .navbar-toggler {
+  border: none; /* Remove border from toggler */
+}
+
+.navbar .navbar-toggler-icon {
+  filter: invert(100%); /* Make toggler icon white */
+}
+
+.navbar .navbar-collapse {
+  flex-grow: 0; /* Prevent navbar collapse from growing */
+}
+
+/* Optional: Add a gradient to the navbar */
+.navbar {
+  background: linear-gradient(45deg, #283048, #37475a) !important; /* Gradient background */
+}
+
+/* Optional: Style for the dropdown menu */
+.navbar .dropdown-menu {
+  background-color: #283048 !important; /* Dark background for dropdown */
+  border: none; /* Remove default border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  color: white !important; /* White text */
+}
+
+.navbar .dropdown-menu .dropdown-item:hover,
+.navbar .dropdown-menu .dropdown-item:focus {
+  background-color: #37475a !important; /* Slightly lighter background on hover/focus */
+  color: white !important;
+}

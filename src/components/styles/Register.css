@@ -1,0 +1,112 @@
+/* General styles for the form wrapper */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  background-color: #007bff;
+  height: 100vh;
+}
+
+.border-Line {
+  height: 80%;
+  width: 2px;
+  background-color: #000;
+  margin: 0 20px;
+}
+
+/* Styles for the form box */
+.form-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 35%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  color: #007bff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Styles for form groups */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Styles for form inputs */
+.form-control {
+  height: 45px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: none;
+}
+
+/* Styles for form labels */
+.form-floating label {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #6c757d;
+}
+
+/* Styles for help text */
+#pinHelp {
+  color: #6c757d;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Styles for buttons */
+.btn {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+}
+
+.text-danger {
+  color: #dc3545;
+  font-size: 14px;
+}
+
+/* Styles for footer text */
+.form-footer {
+  text-align: center;
+}
+
+.form-footer p {
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+.form-footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}

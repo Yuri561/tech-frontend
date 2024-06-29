@@ -1,0 +1,99 @@
+.sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(25, 25, 35, 0.9) !important;
+  color: white !important;
+  height: 100vh !important;
+  padding: 0 !important;
+  width: 80px; /* Ensure fixed width */
+}
+
+.sidebar-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  color: white !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center icons vertically */
+}
+
+.sidebar-item {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 15px !important;
+  border: none !important;
+  width: 100%; /* Ensure full width */
+  background-color: #1F2833;
+  background-image: 
+    radial-gradient(at 47% 33%, hsl(200, 60%, 15%) 0, transparent 59%), 
+    radial-gradient(at 82% 65%, hsl(210, 60%, 10%) 0, transparent 55%);
+  color: white !important;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s !important;
+}
+
+.sidebar-item:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: #ffbf00 !important; /* Gold color on hover */
+  cursor: pointer !important;
+  transform: translateX(10px); /* Slightly move to the right on hover */
+}
+
+
+
+.sidebar-item.active {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: #ffbf00 !important;
+  border-left: 4px solid #ffbf00; /* Highlight the active item with a border */
+}
+
+.fa-icon {
+  font-size: 1.5rem !important;
+}
+
+.sidebar-item a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.sidebar-item a:hover {
+  color: #ffbf00 !important; /* Slightly lighter text color on hover */
+}
+
+@media (max-width: 768px) {
+  .sidebar-wrapper {
+    display: none !important;
+  }
+
+  .icon-sidebar {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: 50% !important;
+    left: 0 !important;
+    transform: translateY(-50%) !important;
+    background-color: rgba(25, 25, 35, 0.9) !important;
+    border-radius: 12px 12px 12px 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.125) !important;
+    backdrop-filter: blur(25px) saturate(101%) !important;
+    -webkit-backdrop-filter: blur(25px) saturate(101%) !important;
+    padding: 15px !important;
+    padding-left: 2px;
+  }
+
+  .icon-sidebar .sidebar-item {
+    justify-content: center !important;
+    padding: 10px !important;
+  }
+
+  .icon-sidebar .fa-icon {
+    margin: 0 !important;
+  }
+
+  .icon-sidebar .sidebar-item a {
+    display: flex !important;
+    justify-content: center !important;
+  }
+}

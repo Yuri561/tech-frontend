@@ -1,0 +1,56 @@
+/* App.css */
+.app-container {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Sidebar width and main-content width */
+  grid-template-rows: auto 1fr; /* Navbar height and main-content height */
+  grid-template-areas:
+    "navbar navbar"
+    "sidebar main-content";
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: rgba(25, 25, 35, 0.9);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(25, 25, 35, 0.9);
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+.wrapper{
+  width: 100%;
+  border-radius: 0;
+}
+.main-content {
+  grid-area: main-content;
+  display: flex;
+  flex-direction: column; /* Ensure children are stacked vertically */
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  
+  padding: 0
+  
+  
+}
+
+@media screen and (min-width: 2500px) {
+  .app-container {
+    overflow: hidden !important;
+    font-size: 1.5rem;
+    
+  }}
