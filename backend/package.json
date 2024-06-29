@@ -1,0 +1,33 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend file for database and restfulApi",
+  "main": "server.js",
+  "scripts": {
+    "start": "node -r dotenv/config server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yuri561/TechNow.git"
+  },
+  "author": "Yuri Pierre-Louis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yuri561/TechNow/issues"
+  },
+
+  
+  "homepage": "https://github.com/Yuri561/TechNow#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-router": "^0.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.1",
+    "node": "^20.14.0",
+    "nodemon": "^3.1.3"
+  }
+}
