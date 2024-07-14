@@ -1,19 +1,19 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHammer, faScrewdriver, faWrench, faToolbox, faClipboardList, faThermometer,
   faFaucet, faFireExtinguisher, faSnowflake, faFan, faLightbulb, faPlug,
   faTape, faRuler, faHardHat, faBolt, faBroom, faBrush, faFirstAid,
-  faGasPump, faGlasses, faPencilRuler, faArrowRight, faArrowLeft
+  faGasPump, faGlasses, faPencilRuler, faArrowRight, faArrowLeft, faPlus, faPaperPlane
 } from '@fortawesome/free-solid-svg-icons';
 import MultipleChoiceQuiz from './MultipleChoiceQuiz';
 import SafetyVideo from './SafetyVids/SafetyVideos';
+import { Tooltip } from 'react-tooltip';
 
 interface Tool {
   name: string;
   description: string;
-  icon: any; // Replace with appropriate type for FontAwesomeIcon
+  icon: any;
   category: string;
 }
 
@@ -162,8 +162,20 @@ const ToolBox: React.FC = () => {
               </table>
             )}
             <div className="flex justify-center space-x-4 my-4">
-              <button className="bg-green-500 text-white py-1 sm:py-2 px-2 sm:px-4 rounded-lg hover:bg-green-700 transition duration-300 shadow">Add Tool</button>
-              <button className="bg-red-500 text-white py-1 sm:py-2 px-2 sm:px-4 rounded-lg hover:bg-red-700 transition duration-300 shadow">Submit Tools</button>
+              <FontAwesomeIcon
+                icon={faPlus}
+                className="text-white cursor-pointer hover:text-green-500 transition"
+                data-tooltip-id="addTooltip"
+                data-tooltip-content="Add Tool"
+              />
+              <FontAwesomeIcon
+                icon={faPaperPlane}
+                className="text-white cursor-pointer hover:text-blue-500 transition"
+                data-tooltip-id="submitTooltip"
+                data-tooltip-content="Submit Tools"
+              />
+              <Tooltip id="addTooltip" place="top" effect="solid" />
+              <Tooltip id="submitTooltip" place="top" effect="solid" />
             </div>
           </div>
         )}
@@ -171,7 +183,7 @@ const ToolBox: React.FC = () => {
 
       {showVideoModal && currentVideo && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-          <div className="bg-gray-800 p-4 sm:p-6 rounded-2xl shadow-md w-full max-w-3xl relative">
+          <div className="bg-gray-800 p-4 sm:p-2 rounded-2xl shadow-md w-full max-w-3xl relative">
             {!showQuiz ? (
               <SafetyVideo url={currentVideo.url} title={currentVideo.title} onEnd={handleVideoEnd} />
             ) : (

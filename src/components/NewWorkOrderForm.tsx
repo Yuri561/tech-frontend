@@ -183,13 +183,13 @@ const NewWorkOrderForm: React.FC = () => {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: 'easeInOut' }}
-      className="new-work-order-form-container p-10 w-full h-full bg-gray-900 text-white flex flex-col items-center"
+      className="new-work-order-form-container p-6 w-full h-full bg-gray-900 text-white flex flex-col items-center"
     >
-      <header className="page-header w-full max-w-5xl mb-6 bg-gray-800 p-4 rounded-2xl flex justify-between items-center shadow-md" data-aos="fade-down">
-        <h2 className="font-semibold sm: text-sm">New Work Order</h2>
+      <header className="page-header w-full max-w-9xl mb-6 bg-gray-800 p-4 rounded-2xl flex justify-between items-center shadow-md">
+        <h1 className="font-semibold sm: text-xl">New Work Order</h1>
         <div className="user-info text-lg">Welcome, {username}</div>
       </header>
-      <div className="form-wrapper w-full max-w-5xl   bg-gray-800 p-3 rounded-2xl shadow-md flex-1" data-aos="fade-up">
+      <div className="form-wrapper w-full max-w-9xl   bg-gray-800 p-3 rounded-2xl shadow-md flex-1">
         <form className="new-work-order-form flex flex-col space-y-4 h-full" onSubmit={handleSubmit} method="post">
           <h3 className="text-xl font-semibold mb-4">{sections[currentSection].title}</h3>
           <div className="flex flex-col space-y-4 flex-1">
@@ -197,15 +197,15 @@ const NewWorkOrderForm: React.FC = () => {
           </div>
           {error && <p className="text-red-500">{error}</p>}
           <div className="flex justify-between w-full mt-4">
-            <button type="button" onClick={handlePrev} className="bg-gray-500 text-white py-2 px-4 rounded-2xl hover:bg-gray-700 transition duration-300 shadow">
+            <button type="button" onClick={handlePrev} className="bg-gray-500 text-white py-2 px-4  mb-4 rounded-2xl hover:bg-gray-700 transition duration-300 shadow">
               &larr;
             </button>
-            <button type="button" onClick={handleNext} className="bg-gray-500 text-white py-2 px-4 rounded-2xl hover:bg-gray-700 transition duration-300 shadow">
+            <button type="button" onClick={handleNext} className="bg-gray-500 text-white py-2 px-4 mb-4 rounded-2xl hover:bg-gray-700 transition duration-300 shadow">
               &rarr;
             </button>
           </div>
           {currentSection === sections.length - 1 && (
-            <button type="submit" className="mt-4 bg-blue-500 text-white py-2 px-4 rounded-2xl hover:bg-blue-700 transition duration-300 shadow">
+            <button type="submit" className="mt-4 mb-4 bg-blue-500 text-white py-2 px-4 rounded-2xl hover:bg-blue-700 transition duration-300 shadow">
               {loading ? (
                 <div className="w-full bg-gray-800 rounded-full h-4 mb-4">
                   <div className="bg-blue-500 h-4 rounded-full animate-progress-bar"></div>

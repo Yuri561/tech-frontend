@@ -49,8 +49,7 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
+      duration: 1000
     });
 
     const fetchWeather = async () => {
@@ -174,7 +173,7 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        <section className="bg-gray-800 p-4 md:p-2 md:h-80 rounded" data-aos="zoom-in">
+        <section className="bg-gray-800 p-4 md:p-2 md:h-80 rounded">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl md:text-2xl text-white">TechTrack</h2>
             <div className="text-lg md:text-xl text-white">

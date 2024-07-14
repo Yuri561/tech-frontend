@@ -103,7 +103,7 @@ const Equipment: React.FC = () => {
                   <li key={index} className="text-lg">{entry}</li>
                 ))}
               </ul>
-              <h4 className="text-lg font-semibold mt-4">Additional Notes</h4>
+              <h4 className="text-lg font-semibold mt-4"> Technician Notes</h4>
               <p className="text-lg">{selectedWorkOrder.Notes}</p>
             </div>
             <div className="bg-gray-800 p-6 rounded-2xl shadow-md">

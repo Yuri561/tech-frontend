@@ -6,3 +6,17 @@
 .animate-progress-bar {
   animation: progress 2s ease-in-out forwards;
 }
+
+
+.work-request {
+  padding: 0;
+}
+
+.page-header {
+  margin: 0;
+}
+
+.work-entry-form {
+  margin: 0;
+  padding: 0;
+}
