@@ -32,7 +32,7 @@ const Equipment: React.FC = () => {
   useEffect(() => {
     const fetchWorkOrders = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/workorders?assignedTo=${username}`);
+        const response = await axios.get(`https://server-alpha-rose.vercel.app/workorders?assignedTo=${username}`);
         console.log('Fetched work orders:', response.data);
         setWorkOrders(Array.isArray(response.data) ? response.data : []);
       } catch (error) {
