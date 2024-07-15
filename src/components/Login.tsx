@@ -21,7 +21,7 @@ const Login: React.FC<LoginProps> = ({ setIsAuthenticated }) => {
     setLoading(true);
     setError('');
     try {
-      const result = await axios.post('http://localhost:5000/login', { username, pin, role });
+      const result = await axios.post('https://server-alpha-rose.vercel.app/login', { username, pin, role });
       if (result.status === 200) {
 
         console.log('User successfully authenticated', result.data.usernames, result.data.role);
