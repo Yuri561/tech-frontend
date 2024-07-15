@@ -44,8 +44,8 @@ const TimeReview: React.FC = () => {
               data-tooltip-id="submitTooltip"
               data-tooltip-content="Submit Time"
             />
-            <Tooltip id="addTooltip" place="top" effect="solid" />
-            <Tooltip id="submitTooltip" place="top" effect="solid" />
+            <Tooltip id="addTooltip" place="top" />
+            <Tooltip id="submitTooltip" place="top" />
           </div>
         </div>
         <div className="time-table-container w-full overflow-x-auto overflow-y-auto flex-grow mb-4">
