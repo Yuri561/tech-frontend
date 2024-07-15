@@ -63,7 +63,7 @@ const NewWorkOrderForm: React.FC = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:5000/workorders', newOrder);
+      const response = await axios.post('https://server-alpha-rose.vercel.app/workorders', newOrder);
       console.log('Work order has been created', response.data);
       navigate('/work-request');
     } catch (e) {
