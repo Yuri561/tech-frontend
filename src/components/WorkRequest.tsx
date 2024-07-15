@@ -26,7 +26,7 @@ const WorkRequest: React.FC = () => {
   const fetchWorkOrders = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:5000/workorders', {
+      const response = await axios.get('https://server-alpha-rose.vercel.app/workorders', {
         params: { assignedTo: username }
       });
       setWorkEntries(Array.isArray(response.data) ? response.data : []);
