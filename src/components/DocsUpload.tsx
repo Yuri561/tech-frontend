@@ -31,7 +31,7 @@ const DocsUpload: React.FC<DocsUploadProps> = ({ workOrderId }) => {
     formData.append('document', document);
 
     try {
-      const result = await axios.post(`http://localhost:5000/upload/${workOrderId}`, formData, {
+      const result = await axios.post(`https://server-alpha-rose.vercel.app/upload/${workOrderId}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
